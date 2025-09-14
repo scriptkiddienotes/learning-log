@@ -1,11 +1,12 @@
-<header class="site-header">
-  <div class="brand">
-    <a class="site-title" href="{{ '/' | relative_url }}">$ {{ site.title }}</a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+<header class="header">
+  <div class="h-wrap">
+    <h1 class="brand">$ {{ site.title }}</h1>
+    <p class="sub">learning by breaking — systems, C, security</p>
+    <nav class="menu">
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+      <button class="toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
   </div>
-  <nav class="site-nav">
-    {% for item in site.nav %}
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-    {% endfor %}
-  </nav>
 </header>
