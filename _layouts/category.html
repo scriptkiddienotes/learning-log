@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section class="prose">
+  <h1>{{ page.title }}</h1>
+  {% assign items = site.categories[page.category_key] | sort: "date" | reverse %}
+  {% if items and items.size > 0 %}
+    <ul class="cat-list">
+      {% for post in items %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="meta">— {{ post.date | date: "%Y-%m-%d" }}</span>
+          {% if post.excerpt %}
+            <div class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="note">No posts here yet.</p>
+  {% endif %}
+</section>
