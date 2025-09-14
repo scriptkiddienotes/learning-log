@@ -1,4 +1,4 @@
-// Theme toggle (light/dark) with localStorage
+// Theme toggle with emoji icon
 (function(){
   const root = document.documentElement;
   const btn = document.getElementById('themeToggle');
@@ -9,7 +9,6 @@
     root.setAttribute('data-theme', t);
     if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
   }
-
   applyTheme(saved || (prefersDark ? 'dark' : 'light'));
 
   if (btn) {
@@ -21,7 +20,7 @@
   }
 })();
 
-// Smooth scroll for in-page anchors
+// Smooth anchor scroll (native CSS enabled; keep handler for hash update)
 document.addEventListener('click', function(e){
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
@@ -34,7 +33,7 @@ document.addEventListener('click', function(e){
   }
 });
 
-// Build a ToC on post pages from h2/h3 headings
+// Build a minimal, free-look ToC from h2/h3 on post pages
 (function(){
   const toc = document.getElementById('toc');
   if (!toc) return;
@@ -42,27 +41,25 @@ document.addEventListener('click', function(e){
   const headings = Array.from(document.querySelectorAll('.post h2, .post h3'));
   if (!headings.length) return;
 
-  // Ensure IDs for headings
   headings.forEach(h => {
     if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g, '-');
   });
 
-  const list = document.createElement('nav');
-  list.className = 'toc-inner';
-  list.innerHTML = '<div class="toc-title">On this page</div>';
+  const nav = document.createElement('nav');
+  nav.className = 'toc-inner';
+  nav.innerHTML = '<div class="toc-title">on this page</div>';
 
   headings.forEach(h => {
     const a = document.createElement('a');
     a.href = '#' + h.id;
     a.textContent = h.textContent;
     a.className = 'toc-link level-' + (h.tagName === 'H2' ? '2' : '3');
-    list.appendChild(a);
+    nav.appendChild(a);
   });
 
-  toc.appendChild(list);
+  toc.appendChild(nav);
 
-  // Highlight active section with IntersectionObserver
-  const links = Array.from(list.querySelectorAll('.toc-link'));
+  const links = Array.from(nav.querySelectorAll('.toc-link'));
   const map = Object.fromEntries(links.map(l => [l.getAttribute('href').slice(1), l]));
 
   const observer = new IntersectionObserver((entries) => {
@@ -76,4 +73,3 @@ document.addEventListener('click', function(e){
 
   headings.forEach(h => observer.observe(h));
 })();
-
