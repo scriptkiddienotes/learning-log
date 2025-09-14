@@ -1,13 +1,12 @@
-
 ---
 layout: default
-title: About
+title: about
 permalink: /about/
 ---
 
-# About
+# about
 
-I’m documenting my learning journey across system internals and security.
+I’m documenting my learning journey across system internals and security.  
+No boxes. Just flow, code, and curiosity.
 
-- Email: you@example.com  
 - GitHub: [scriptkiddienotes](https://github.com/scriptkiddienotes)
