@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: category
 title: system internals
 permalink: /categories/system-internals/
+category_key: "System Internals"
 ---
 
 # posts in **system internals**
