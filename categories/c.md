@@ -1,8 +1,10 @@
 ---
-layout: default
-title: c
+layout: category
+title: C
 permalink: /categories/c/
+category_key: "C"
 ---
+
 
 # posts in **C**
 
