@@ -142,6 +142,28 @@ code{
 }
 
 /* ===== footer ===== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.site-container {
+  min-height: 100%;         
+  display: flex;
+  flex-direction: column;    
+}
+
+main.wrap {
+  flex: 1;                  
+}
+
+.footer {
+  text-align:center;
+  color:var(--muted);
+  padding:16px 0;            /* thoda chhota padding kiya */
+  border-top:1px solid var(--line);
+}
 .footer{
   text-align:center; color:var(--muted); padding:32px 0 40px;
   border-top:1px solid var(--line);
