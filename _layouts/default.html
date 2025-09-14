@@ -10,18 +10,19 @@
 <body>
   <div class="site-container">
     {% include header.html %}
-  
+
     <main class="wrap">
       {{ content }}
-  
+
       {% if page.layout == 'post' %}
         <aside class="toc" id="toc"></aside>
       {% endif %}
     </main>
-  
-    <footer class="footer">{{ site.time | date: "%Y" }} — scriptkiddienotes</footer>
-  
-    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script> 
+
+    <footer class="footer">2025 — scriptkiddienotes</footer>
   </div>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </body>
+
 </html>
