@@ -160,3 +160,25 @@ main.wrap {
   padding:16px 0 20px;  /* smaller if you want */
   border-top:1px solid var(--line);
 }
+
+
+/* category lists — clean bullets with neon vibe */
+.cat-list{
+  list-style:none; padding:0; margin:18px 0;
+}
+.cat-list li{
+  position:relative; padding-left:18px; margin:12px 0 18px;
+  border-bottom:1px solid color-mix(in oklab, var(--line), transparent 55%);
+}
+.cat-list li:last-child{ border-bottom:none; }
+.cat-list li::before{
+  content:"•";
+  position:absolute; left:0; top:2px;
+  color:var(--acc1); /* neon dot */
+  font-weight:900; line-height:1;
+}
+.cat-list a{ color:var(--link); text-decoration:none; }
+.cat-list a:hover{ text-decoration:underline wavy; }
+.cat-list .meta{ color:var(--muted); font-size:13px; margin-left:6px; }
+.cat-list .excerpt{ color: color-mix(in oklab, var(--text), transparent 20%); margin-top:6px; }
+
