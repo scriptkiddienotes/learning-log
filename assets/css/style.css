@@ -158,13 +158,7 @@ main.wrap {
   flex: 1;                  
 }
 
-.footer {
-  text-align:center;
-  color:var(--muted);
-  padding:16px 0;            /* thoda chhota padding kiya */
-  border-top:1px solid var(--line);
-}
 .footer{
-  text-align:center; color:var(--muted); padding:32px 0 40px;
+  text-align:center; color:var(--muted); padding:32px 0 10px;
   border-top:1px solid var(--line);
 }
