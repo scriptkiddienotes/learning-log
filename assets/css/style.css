@@ -21,6 +21,15 @@ body{
   font: 16px/1.7 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Arial;
 }
 
+/* Make layout fill viewport & push footer to bottom */
+html, body { height: 100%; }
+
+body{
+  min-height: 100svh;            /* full viewport height */
+  display: grid;                  /* header / content / footer rows */
+  grid-template-rows: auto 1fr auto;
+}
+
 /* subtle texture/glow */
 body::before, body::after{
   content:""; position:fixed; inset:-20vmax; z-index:-2; pointer-events:none;
