@@ -1,11 +1,8 @@
-# scriptkiddienotes — blog
+# learning-log (scriptkiddienotes)
 
-A colorful, slightly hacker-themed Jekyll site with light/dark toggle and post ToC.
+Free-flow Jekyll site (no boxes), neon accents, emoji day/night toggle, and minimal post TOC.
 
-## Quick start
-
-1. Clone this repo and cd in.
-2. Install Ruby, then:
-   ```bash
-   bundle install
-   bundle exec jekyll serve
+## local dev
+```bash
+bundle install
+bundle exec jekyll serve
