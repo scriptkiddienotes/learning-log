@@ -1,25 +1,26 @@
 ---
 layout: default
 ---
-<section class="hero">
-  <img class="avatar" src="{{ site.profile_image | relative_url }}" alt="Profile picture">
+<section class="hero" id="home">
+  <img class="avatar" src="{{ site.profile_image | relative_url }}" alt="Profile" />
   <div class="hero-text">
-    <h1>{{ site.title }}</h1>
+    <h1 class="title">$ {{ site.title }}</h1>
     <p class="tagline">{{ site.tagline }}</p>
   </div>
 </section>
 
-<section class="cards">
-  <a class="card" href="{{ '/categories/system-internals/' | relative_url }}">
-    <h3>System Internals</h3>
-    <p>Notes while spelunking kernels, processes, memory, and tooling.</p>
-  </a>
-  <a class="card" href="{{ '/categories/c/' | relative_url }}">
-    <h3>C</h3>
-    <p>Secure C patterns, pitfalls, and tiny experiments.</p>
-  </a>
-  <a class="card" href="{{ '/about/' | relative_url }}">
-    <h3>About</h3>
-    <p>Why this site exists and how I’m learning.</p>
-  </a>
+<div class="rule"></div>
+
+<section class="prose" id="notes">
+  <h2>what is this?</h2>
+  <p>
+    A <em>free-flow</em> notebook for system internals, C, and security. No rigid cards—just air, light,
+    and neon edges. Browse categories from the header or jump to <a href="{{ '/about/' | relative_url }}">about</a>.
+  </p>
+
+  <h2>vibe</h2>
+  <p class="note">
+    dark bg <code>#0a0b0f</code>, light bg <code>#fefefe</code>, text <code>#e6f2ff</code> / <code>#0f172a</code>,
+    accents <code>#37ff8b</code>, <code>#7de3ff</code>, <code>#ff7de3</code>, <code>#ffd166</code>.
+  </p>
 </section>
