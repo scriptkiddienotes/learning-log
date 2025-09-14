@@ -1,1 +1,30 @@
+title: "scriptkiddienotes"
+description: "Learning logs on systems & security"
+author: "scriptkiddienotes"
 
+baseurl: "/learning-log"
+
+url: "https://scriptkiddienotes.github.io"  
+
+# Navigation used by the header include
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "System Internals"
+    url: "/categories/system-internals/"
+  - title: "C"
+    url: "/categories/c/"
+  - title: "About"
+    url: "/about/"
+
+# Home page content
+profile_image: "/assets/img/profile.jpg"
+tagline: "Breaking things to learn how they work."
+
+# Build options
+markdown: kramdown
+theme: null
+plugins: []
+
+# Permalinks for posts
+permalink: /:categories/:year/:month/:day/:title/
