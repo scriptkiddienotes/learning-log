@@ -5,12 +5,6 @@ permalink: /categories/Languages/
 toc: true
 ---
 
-<section class="prose">
-  <h1>Languages</h1>
-  <p class="note">Posts grouped by language. Use categories like
-  <code>["Languages","C++"]</code>, <code>["Languages","Golang"]</code>, <code>["Languages","Rust"]</code>.</p>
-</section>
-
 {%- comment -%} ---------- C++ ---------- {%- endcomment -%}
 {% assign items_cpp = site.posts | where_exp: "p", "p.categories contains 'Languages'" | where_exp: "p", "p.categories contains 'C++'" %}
 {% if items_cpp and items_cpp.size > 0 %}
