@@ -12,7 +12,7 @@ toc: true
   {% assign items_cpp = items_cpp_all | where_exp: "p", "p.categories contains 'Languages'" %}
   {% if items_cpp and items_cpp.size > 0 %}
   <section class="prose" id="cpp">
-    <h2>C++</h2>
+    <h2 id="cpp">C++</h2>
     <ul class="cat-list">
       {% for post in items_cpp %}
         <li>
@@ -32,7 +32,7 @@ toc: true
   {% assign items_go = items_go_all | where_exp: "p", "p.categories contains 'Languages'" %}
   {% if items_go and items_go.size > 0 %}
   <section class="prose" id="golang">
-    <h2>Golang</h2>
+    <h2 id="golang">Golang</h2>
     <ul class="cat-list">
       {% for post in items_go %}
         <li>
@@ -52,7 +52,7 @@ toc: true
   {% assign items_rust = items_rust_all | where_exp: "p", "p.categories contains 'Languages'" %}
   {% if items_rust and items_rust.size > 0 %}
   <section class="prose" id="rust">
-    <h2>Rust</h2>
+    <h2 id="rust">Rust</h2>
     <ul class="cat-list">
       {% for post in items_rust %}
         <li>
