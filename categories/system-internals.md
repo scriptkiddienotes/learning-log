@@ -1,6 +1,6 @@
 ---
 layout: category
-title: system internals
+title: System Internals
 permalink: /categories/system-internals/
 category_key: "System Internals"
 ---
