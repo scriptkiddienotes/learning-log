@@ -28,6 +28,7 @@ plugins: []
 # permalinks
 permalink: /:categories/:year/:month/:day/:title/
 
+```yml
 markdown: kramdown
 highlighter: rouge
 kramdown:
