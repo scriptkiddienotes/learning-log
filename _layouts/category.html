@@ -5,9 +5,10 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   {% assign key = page.category_key | default: page.title %}
-  {% assign items = site.categories[key] | default: empty | sort: "date" | reverse %}
+  {% assign items = site.categories[key] %}
 
-  {% if items and items.size > 0 %}
+  {% if items %}
+    {% assign items = items | sort: "date" | reverse %}
     <ul class="cat-list">
       {% for post in items %}
         <li>
