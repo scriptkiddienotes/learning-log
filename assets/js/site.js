@@ -20,7 +20,7 @@
   }
 })();
 
-// Smooth anchor scroll (native CSS enabled; keep handler for hash update)
+// Smooth anchor scroll
 document.addEventListener('click', function(e){
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
@@ -33,25 +33,22 @@ document.addEventListener('click', function(e){
   }
 });
 
-// Build a minimal, free-look ToC from h1/h2/h3
+// Build ToC from H1/H2/H3 (works for posts and pages)
 (function () {
   const toc = document.getElementById('toc');
   if (!toc) return;
 
-  // Prefer post content; otherwise use generic prose in the page
   const scope =
     document.querySelector('.post') ||
     document.querySelector('.page-main') ||
     document;
 
-  // Collect headings (H1/H2/H3)
   const headings = Array.from(scope.querySelectorAll('h1, h2, h3'))
-    // ignore headings inside the sidebar toc itself
     .filter(h => !toc.contains(h));
 
   if (!headings.length) return;
 
-  // Ensure each heading has a stable id
+  // Ensure IDs
   headings.forEach(h => {
     if (!h.id) {
       h.id = h.textContent.trim().toLowerCase()
@@ -60,7 +57,7 @@ document.addEventListener('click', function(e){
     }
   });
 
-  // Render links
+  // Render ToC
   const nav = document.createElement('nav');
   nav.className = 'toc-inner';
   nav.innerHTML = '<div class="toc-title">On this page</div>';
@@ -74,10 +71,10 @@ document.addEventListener('click', function(e){
     nav.appendChild(a);
   });
 
-  toc.innerHTML = ''; // clear if anything existed
+  toc.innerHTML = '';
   toc.appendChild(nav);
 
-  // Active section highlight
+  // Active highlight
   const links = Array.from(nav.querySelectorAll('.toc-link'));
   const map = Object.fromEntries(links.map(l => [l.getAttribute('href').slice(1), l]));
 
