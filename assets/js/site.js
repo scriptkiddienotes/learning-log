@@ -33,32 +33,51 @@ document.addEventListener('click', function(e){
   }
 });
 
-// Build a minimal, free-look ToC from h2/h3 on post pages
-(function(){
+// Build a minimal, free-look ToC from h1/h2/h3
+(function () {
   const toc = document.getElementById('toc');
   if (!toc) return;
 
-  const headings = Array.from(document.querySelectorAll('.post h2, .post h3'));
+  // Prefer post content; otherwise use generic prose in the page
+  const scope =
+    document.querySelector('.post') ||
+    document.querySelector('.page-main') ||
+    document;
+
+  // Collect headings (H1/H2/H3)
+  const headings = Array.from(scope.querySelectorAll('h1, h2, h3'))
+    // ignore headings inside the sidebar toc itself
+    .filter(h => !toc.contains(h));
+
   if (!headings.length) return;
 
+  // Ensure each heading has a stable id
   headings.forEach(h => {
-    if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g, '-');
+    if (!h.id) {
+      h.id = h.textContent.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}]+/gu, '-')
+        .replace(/^-+|-+$/g, '');
+    }
   });
 
+  // Render links
   const nav = document.createElement('nav');
   nav.className = 'toc-inner';
   nav.innerHTML = '<div class="toc-title">On this page</div>';
 
   headings.forEach(h => {
+    const level = h.tagName === 'H1' ? 1 : h.tagName === 'H2' ? 2 : 3;
     const a = document.createElement('a');
     a.href = '#' + h.id;
     a.textContent = h.textContent;
-    a.className = 'toc-link level-' + (h.tagName === 'H2' ? '2' : '3');
+    a.className = 'toc-link level-' + level;
     nav.appendChild(a);
   });
 
+  toc.innerHTML = ''; // clear if anything existed
   toc.appendChild(nav);
 
+  // Active section highlight
   const links = Array.from(nav.querySelectorAll('.toc-link'));
   const map = Object.fromEntries(links.map(l => [l.getAttribute('href').slice(1), l]));
 
