@@ -12,12 +12,17 @@
     {% include header.html %}
 
     <main class="wrap">
-      {{ content }}
-
-      {% if page.layout == 'post' %}
-        <aside class="toc" id="toc"></aside>
-      {% endif %}
+      <div class="page">
+        <div class="page-main">
+          {{ content }}
+        </div>
+    
+        {% if page.layout == 'post' or page.toc == true %}
+          <aside class="toc" id="toc"></aside>
+        {% endif %}
+      </div>
     </main>
+
 
     <footer class="footer">2025 — ScriptKiddieNotes</footer>
   </div>
