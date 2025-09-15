@@ -72,14 +72,15 @@ body::after{
 .page{
   display: grid;
   grid-template-columns: 1fr;   /* mobile: single column */
-  gap: 24px;
+  gap: 16px;
   align-items: start;
 }
 .page-main{ min-width: 0; }     /* prevents overflow from code blocks */
 
 @media (min-width: 980px){
   .page{
-    grid-template-columns: minmax(0,1fr) 280px;  /* content | toc */
+    grid-template-columns: minmax(0,1fr) 260px;
+    column-gap: 16px;   /* content | toc */
   }
   .toc{
     position: sticky;
@@ -87,11 +88,12 @@ body::after{
     margin-top: 0;    /* don't push it down */
     padding: 0;       /* keeps the free, no-box vibe */
     height: max-content;
+    transform: translateX(-6px);   /* gentle nudge left toward content */
   }
 }
 
 /* ===== layout & rhythm ===== */
-.wrap{max-width:1100px; margin:0 auto; padding:40px 24px}
+.wrap{max-width:1200px; margin:0 auto; padding:40px 24px}
 .section{padding:52px 0}
 .rule{
   height:1px; background:var(--grad); opacity:.65; filter:blur(.2px);
@@ -136,7 +138,7 @@ code{
 
 /* Readable column for post content */
 .post{
-  max-width: 72ch;       /* comfy reading width */
+  max-width: 84ch;       /* comfy reading width */
   margin: 0 auto;        /* center in the page-main column */
 }
 
