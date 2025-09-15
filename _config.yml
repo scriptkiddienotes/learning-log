@@ -27,3 +27,9 @@ plugins: []
 
 # permalinks
 permalink: /:categories/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
