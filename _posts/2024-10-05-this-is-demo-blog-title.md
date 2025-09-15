@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pointers & UB"
-categories: ["Languages"]
+categories: ["Languages","Golang"]
 ---
 
 # Hi
