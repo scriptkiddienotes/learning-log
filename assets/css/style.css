@@ -88,7 +88,7 @@ body::after{
     margin-top: 0;    /* don't push it down */
     padding: 0;       /* keeps the free, no-box vibe */
     height: max-content;
-    transform: translateX(-6px);   /* gentle nudge left toward content */
+    transform: translateX(-10px);   /* gentle nudge left toward content */
   }
 }
 
@@ -138,7 +138,7 @@ code{
 
 /* Readable column for post content */
 .post{
-  max-width: 84ch;       /* comfy reading width */
+  max-width: 92ch;       /* comfy reading width */
   margin: 0 auto;        /* center in the page-main column */
 }
 
