@@ -121,21 +121,42 @@ code{
 .post figcaption{ color:var(--muted); font-size:13px; text-align:center; margin-top:6px; }
 .post ul, .post ol{ padding-left:1.2em; }
 
-/* code blocks */
-.post .highlight, .post pre{
-  max-width:100%; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;
-  background: color-mix(in oklab, var(--bg), #000 6%);
-  border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:16px 0;
-}
-.post pre, .post code{
+/* --- Clean, normal code blocks --- */
+.post pre,
+.post .highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: #1e1e1e;           /* dark gray panel */
+  color: #e6e6e6;                /* light text */
+  border: 1px solid #444;        /* thin border */
+  border-radius: 4px;            /* subtle rounding */
+  padding: 12px 14px;
+  margin: 16px 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  text-align:left;
+  font-size: 0.95em;
+  line-height: 1.5;
 }
-.post code{ white-space:pre; word-break:normal; overflow-wrap:normal; }
-.post p code, .post li code{
-  padding:.1em .35em; border-radius:6px; background: color-mix(in oklab, var(--bg), #000 6%);
-  border:1px solid var(--line); white-space: break-spaces;
+
+.post code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95em;
+  background: none;    /* inline code will keep theme background */
+  border: none;
+  padding: 0;
+  white-space: pre;
 }
+
+.post p code,
+.post li code {
+  background: #2a2a2a;     /* inline code small highlight */
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+
 
 /* headings offset for sticky header (posts + pages) */
 .post h1, .post h2, .post h3 { scroll-margin-top: 90px; }
