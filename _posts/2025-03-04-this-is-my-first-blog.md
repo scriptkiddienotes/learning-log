@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "C++: RAII in Practice"
 date: 2025-09-15
 categories: ["Languages", "C++"]   
