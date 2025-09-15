@@ -1,13 +1,13 @@
 ---
 layout: category
-title: C
-permalink: /categories/c/
-category_key: "C"
+title: Languages
+permalink: /categories/Languages/
+category_key: "Languages"
 ---
 
 
 # posts in **C**
 
-{% for post in site.categories["C"] %}
+{% for post in site.categories["Languaes"] %}
 - [{{ post.title }}]({{ post.url | relative_url }}) <span class="meta">— {{ post.date | date: "%Y-%m-%d" }}</span>
 {% endfor %}
