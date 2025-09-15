@@ -88,7 +88,7 @@ body::after{
     margin-top: 0;    /* don't push it down */
     padding: 0;       /* keeps the free, no-box vibe */
     height: max-content;
-    transform: translateX(0);   /* gentle nudge left toward content */
+    transform: translateX(-10);   /* gentle nudge left toward content */
   }
   .page-main{
     padding-left: 4px; /* gentle nudge so text doesn't feel squished */
