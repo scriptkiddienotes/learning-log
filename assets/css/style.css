@@ -79,8 +79,8 @@ body::after{
 
 @media (min-width: 980px){
   .page{
-    grid-template-columns: minmax(0,1fr) 260px;
-    column-gap: 16px;   /* content | toc */
+    grid-template-columns: minmax(0,1fr) 240px;
+    column-gap: 12px;   /* content | toc */
   }
   .toc{
     position: sticky;
@@ -88,7 +88,7 @@ body::after{
     margin-top: 0;    /* don't push it down */
     padding: 0;       /* keeps the free, no-box vibe */
     height: max-content;
-    transform: translateX(-10px);   /* gentle nudge left toward content */
+    transform: translateX(-18px);   /* gentle nudge left toward content */
   }
 }
 
@@ -219,6 +219,8 @@ code{
 }
 
 /* ===== post & table-of-contents ===== */
+
+
 .post h1{margin:0 0 .2em}
 .meta{color:var(--muted); font-size:13px; margin-bottom:14px}
 .post h2, .post h3{scroll-margin-top: 90px;}
@@ -233,7 +235,17 @@ code{
   border-bottom:1px solid color-mix(in oklab, var(--line), transparent 50%);
 }
 .toc .toc-link:last-child{border-bottom:none}
-.toc .toc-link.level-3{padding-left:14px}
+/* ToC levels */
+.toc .toc-link.level-1{
+  font-weight: 800;
+  padding: 8px 0 6px;
+  display: block;
+}
+.toc .toc-link.level-2{
+  padding-left: 8px;
+}
+.toc .toc-link.level-3{padding-left:16px}
+
 .toc .toc-link:hover{color:var(--text)}
 .toc .toc-link.active{
   color:var(--text);
@@ -305,8 +317,10 @@ main.wrap {
 
 
 /* make in-page jumps stop below sticky header on non-post pages too */
-.prose h2, .prose h3 { scroll-margin-top: 90px; }
+.post h1, .post h2, .post h3 { scroll-margin-top: 90px; }
+.prose h1, .prose h2, .prose h3 { scroll-margin-top: 90px; }
 
-.no-chrome .prose h2,
-.no-chrome .prose h3 { scroll-margin-top: 24px; }
+.no-chrome .post h1, .no-chrome .post h2, .no-chrome .post h3 { scroll-margin-top: 24px; }
+.no-chrome .prose h1, .no-chrome .prose h2, .no-chrome .prose h3 { scroll-margin-top: 24px; }
+
 
