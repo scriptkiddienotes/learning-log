@@ -7,13 +7,13 @@ baseurl: "/learning-log"   # repo name
 
 # header navigation
 nav:
-  - title: "home"
+  - title: "Home"
     url: "/"
-  - title: "notes"
+  - title: "System Internals"
     url: "/categories/system-internals/"
-  - title: "c"
-    url: "/categories/c/"
-  - title: "about"
+  - title: "Languages"
+    url: "/categories/Languages/"
+  - title: "About"
     url: "/about/"
 
 # home hero
