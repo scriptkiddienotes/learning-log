@@ -302,10 +302,15 @@ main.wrap {
 .cat-list .meta{ color:var(--muted); font-size:13px; margin-left:6px; }
 .cat-list .excerpt{ color: color-mix(in oklab, var(--text), transparent 20%); margin-top:6px; }
 
-/* When header/footer are hidden (posts), tighten top spacing + TOC offset */
-.no-chrome .wrap{ padding-top: 24px; }     /* header absent → smaller top padding */
+/* If header/footer still slip through, hide them when the post sets no-chrome */
+.no-chrome .header,
+.no-chrome .footer { display: none !important; }
+
+/* Tighter spacing when chrome is hidden */
+.no-chrome .wrap{ padding-top: 24px; }
 
 @media (min-width: 980px){
-  .no-chrome .toc{ top: 24px; }            /* sticky starts closer to top */
+  .no-chrome .toc{ top: 24px; }
 }
+
 
