@@ -47,7 +47,7 @@ document.addEventListener('click', function(e){
 
   const nav = document.createElement('nav');
   nav.className = 'toc-inner';
-  nav.innerHTML = '<div class="toc-title">on this page</div>';
+  nav.innerHTML = '<div class="toc-title">On this page</div>';
 
   headings.forEach(h => {
     const a = document.createElement('a');
