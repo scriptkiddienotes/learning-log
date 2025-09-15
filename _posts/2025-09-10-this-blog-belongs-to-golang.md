@@ -26,3 +26,23 @@ func main() {
     fmt.Println("Hello, ScriptKiddie!")
 }
 ```
+
+## Running the Program
+
+Run it in your terminal:
+
+`go run hello.go`
+
+You should see:
+
+`Hello, ScriptKiddie!`
+
+### Key Takeaways
+
+package main defines the entry point.
+
+fmt.Println prints output.
+
+Go uses curly braces {} for code blocks.
+
+The Go toolchain makes compiling and running code very simple.
