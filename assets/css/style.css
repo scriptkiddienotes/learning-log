@@ -179,6 +179,44 @@ code{
   padding-left: 1.2em;
 }
 
+/* --- Code blocks inside posts: fit the column + horizontal scroll --- */
+
+/* Rouge (Jekyll) often wraps code in .highlight > pre > code */
+.post .highlight,
+.post pre{
+  max-width: 100%;              /* never exceed the text column */
+  overflow-x: auto;             /* horizontal scroll if too long */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* smooth on mobile */
+  background: color-mix(in oklab, var(--bg), #000 6%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+/* keep monospace + prevent weird justification in code blocks */
+.post pre,
+.post code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-align: left;             /* not justified in code */
+}
+
+/* make sure extremely long tokens don't break layout */
+.post code{
+  white-space: pre;             /* preserve code layout */
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* optional: inline code wraps nicely without breaking the line height */
+.post p code, .post li code{
+  padding: .1em .35em;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--bg), #000 6%);
+  border: 1px solid var(--line);
+  white-space: break-spaces;    /* inline code can wrap if very long */
+}
 
 
 /* ===== post & table-of-contents ===== */
