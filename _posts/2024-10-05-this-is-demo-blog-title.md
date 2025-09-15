@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pointers & UB"
-categories: ["C"]
+categories: ["Languages"]
 ---
 
 # Hi
