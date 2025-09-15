@@ -315,7 +315,7 @@ main.wrap {
 
 
 /* spacing between language sections */
-#languages .prose + .prose { margin-top: 28px; }
+#Languages .prose + .prose { margin-top: 28px; }
 
 /* more tasteful language headers (uses your glow vibe already) */
 .prose h2 {
