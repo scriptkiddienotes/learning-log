@@ -7,7 +7,7 @@ category_key: "Languages"
 
 
 <section class="prose">
-  <h1>languages</h1>
+  <h1>Languages</h1>
   <p class="note">Posts grouped by language. Add new posts with categories like <code>["Languages","C++"]</code>, <code>["Languages","Golang"]</code>, or <code>["Languages","Rust"]</code>.</p>
 </section>
 
