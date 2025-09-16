@@ -13,8 +13,11 @@ nav:
     url: "/categories/system-internals/"
   - title: "Languages"
     url: "/categories/Languages/"
+  - title: "Computer Architecture"
+    url: "/categories/computer-architecture/"
   - title: "About"
     url: "/about/"
+
 
 # home hero
 profile_image: "/assets/img/profile.jpg"
