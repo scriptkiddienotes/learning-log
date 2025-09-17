@@ -18,8 +18,8 @@ For 64-bit CPU , word = 64 bits = 8 bytes
 
 So , on a 32-bit machine the CPU can fetch 4 bytes in one go; on a 64-bit machine it can fetch 8 bytes in one go.
 
-The CPU works fastest when the data it needs starts at the beginning of a word. If the data sits across two words, the CPU must fetch both words and combine them and that wastes time (extra cycles) and is slower.
+The CPU works fastest when the data it needs fits inside one word. If the data is split across two words, the CPU must fetch both words and combine them and that wastes time (extra cycles) and is slower.
 
 If an `int` (4 bytes) is stored at address `0x1000`, that’s divisible by 4 which is perfect for a 32-bit CPU.
 
-If the same `int` were stored at address`0x1001` , a 32-bit CPU would have to read two words (0x1000..0x1003 and 0x1004..0x1007) and stitch them slower.
+If the same `int` were stored at address`0x1001` , a 32-bit CPU would have to read two words (0x1000..0x1003 and 0x1004..0x1007) and combine them which takes more time to process the data.
