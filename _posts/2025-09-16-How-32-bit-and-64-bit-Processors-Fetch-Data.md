@@ -3,6 +3,7 @@ layout: categories
 title: "How 32-bit and 64-bit Processors Fetch Data"
 date: 2025-09-16
 categories: ["Computer Architecture"]  
+excerpt : CPUs don’t fetch data one byte at a time , they grab chunks called words. This post explains how 32-bit and 64-bit processors handle memory alignment
 ---
 
 # How 32-bit and 64-bit Processors Fetch Data
