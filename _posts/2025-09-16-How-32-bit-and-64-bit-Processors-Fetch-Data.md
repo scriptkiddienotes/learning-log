@@ -6,8 +6,6 @@ categories: ["Computer Architecture"]
 excerpt : CPUs don’t fetch data one byte at a time , they grab chunks called words. This post explains how 32-bit and 64-bit processors handle memory alignment
 ---
 
-# How 32-bit and 64-bit Processors Fetch Data
-
 The CPU (processor) gets data from RAM. But it doesn’t take it one byte at a time , the CPU grabs chunks of memory called *words*. How big a word is depends on the processor.
 
 Each box = 1 byte. Grouped into words of 4 bytes (for 32-bit CPU):
