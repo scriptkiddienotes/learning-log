@@ -1,5 +1,5 @@
 ---
-layout: categories
+layout: post
 title: "How 32-bit and 64-bit Processors Fetch Data"
 date: 2025-09-16
 categories: ["Computer Architecture"]  
