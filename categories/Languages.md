@@ -12,7 +12,7 @@ toc: true
   {% assign items_cpp = items_cpp_all | where_exp: "p", "p.categories contains 'Languages'" %}
   {% if items_cpp and items_cpp.size > 0 %}
   <section class="prose" id="cpp">
-    <h2 id="cpp">C++</h2>
+    <h2 id="cpp">C++ For Reverse Engineering</h2>
     <ul class="cat-list">
       {% for post in items_cpp %}
         <li>
