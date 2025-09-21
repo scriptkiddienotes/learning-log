@@ -101,7 +101,7 @@ Here is the list of basic variables sizes according to their processor type :
 
 For structure , it’s different according to how the members of the structure are placed , let’s see an example
 
-## case-1
+## structure size case - 1
 
 ```cpp
 struct struct1 {
@@ -117,7 +117,7 @@ For 32 bit system, the total size taken by the structure is as follows :
 
 The first member of the structure is a character (1 byte), so it will occupy the first byte at offset 0. The second member is also a character, so it will take the next byte at offset 1. The third member is an integer (4 bytes), but there aren’t enough remaining bytes in the current word to fit it. Therefore, the integer is placed in the next word, and the 2 unused bytes from the first word are padded. In total, the size of the structure will be 8 bytes.
 
-## case - 2
+## structure size case - 2
 
 ```cpp
 struct struct2 {
