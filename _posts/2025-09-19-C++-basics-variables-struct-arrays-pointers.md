@@ -48,12 +48,18 @@ int *ptr = &x;   // &x means "address of x"
 we have to learn first the basic concept about [How 32-bit and 64-bit Processors Fetch Data](https://scriptkiddienotes.github.io/learning-log/computer%20architecture/2025/09/16/How-32-bit-and-64-bit-Processors-Fetch-Data/).
 
 Here is the list of basic variables sizes according to their processor type :
+
+<div class="table-wrap" markdown="1">
+	
 | Type | 32-bit system | 64-bit system |
 | --- | --- | --- |
 | `int` | 4 bytes | 4 bytes |
 | `char` | 1 byte | 1 byte |
 | `float` | 4 bytes | 4 bytes |
 | `pointer` (`int*`) | 4 bytes | 8 bytes |
+
+</div>
+
 For structure , it’s different according to how the members of the structure are placed , let’s see an example
 
 case-1
