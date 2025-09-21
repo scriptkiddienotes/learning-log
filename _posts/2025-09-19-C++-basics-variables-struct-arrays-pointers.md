@@ -7,7 +7,7 @@ excerpt: "C++ basics - variables , struct , arrays , pointers"
 
 For the malware reversing part, a basic understanding of variables is important. We will learn variables first, and then see how they work in the operating system by reversing simple programs.
 
-## Declaring a type
+# Declaring a type
 
 int age = 25;     // `an integer`
 
@@ -17,7 +17,7 @@ float pi = 3.14;  // `a floating point number`
 
 int numbers[3] = {10, 20, 30}; // `an array`
 
-## Structure
+# Structure
 
 A `struct` is a *composite data type* in C/C++ that aggregates variables of possibly different types into a single memory block, laid out in a defined order. Each variable inside is called a **member**, and they are stored contiguously in memory
 
@@ -36,12 +36,51 @@ so , if i define `struct Person p1` :
 - p1 is a new data type
 - p1 object has two members `name` which is an array and `age` which is an integer.
 
-## Pointers
+# Pointers
 
-Every variable lives in memory. A pointer stores the *address* of another variable.
+Every variable lives in memory. A pointer stores the address of another variable.
 
+```cpp
 int x = 42;
-int *ptr = &x;   // &x means "address of x"
+int *ptr ;  
+ptr = &x ; // &x means "address of x"
+*ptr = 50; //changing the value of x to 50
+```
+
+So for different types of variables and functions, there exists different types of pointers. we will see some important pointers.  
+
+- null pointer : It’s like a pointer points to nowhere
+    
+    ```cpp
+    int* ptr = nullptr;
+    ```
+    
+- Void Pointer : such pointers can be referenced to any type of variable but you can’t dereference the pointer without type casting
+    
+    ```cpp
+    int x = 10 ;
+    void* ptr ;
+    ptr = &x ; //referencing 
+    ```
+    
+
+- Constant Pointer : The address referenced to pointer can not be changed , but the value at that address can be changed.
+    
+    ```cpp
+    int x = 10;
+    int y = 20;
+    int* const ptr = &x;
+    *ptr = 500; //Right Approach
+    ptr = &y;//Wrong Approach 
+    ```
+    
+
+- Function Pointer : it holds the address of a function
+    
+    ```cpp
+    void abc(int x); // abc function takes integer as an argument and returns nothing
+    void (*function_ptr)(int) = &abc; // function_ptr made for the same function type
+    ```
 
 # Variables and Their Memory
 
@@ -62,7 +101,7 @@ Here is the list of basic variables sizes according to their processor type :
 
 For structure , it’s different according to how the members of the structure are placed , let’s see an example
 
-case-1
+## case-1
 
 ```cpp
 struct struct1 {
@@ -78,7 +117,7 @@ For 32 bit system, the total size taken by the structure is as follows :
 
 The first member of the structure is a character (1 byte), so it will occupy the first byte at offset 0. The second member is also a character, so it will take the next byte at offset 1. The third member is an integer (4 bytes), but there aren’t enough remaining bytes in the current word to fit it. Therefore, the integer is placed in the next word, and the 2 unused bytes from the first word are padded. In total, the size of the structure will be 8 bytes.
 
-case - 2
+## case - 2
 
 ```cpp
 struct struct2 {
