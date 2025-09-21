@@ -15,6 +15,8 @@ nav:
     url: "/categories/Languages/"
   - title: "Computer Architecture"
     url: "/categories/computer-architecture/"
+  - title: "Learn Reversing"
+    url: "/categories/learn-reversing/"
   - title: "About"
     url: "/about/"
 
