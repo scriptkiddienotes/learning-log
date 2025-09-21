@@ -139,6 +139,35 @@ code{
   background: color-mix(in oklab, var(--bg), #000 4%); /* zebra striping */
 }
 
+/* ===== Solid bordered tables (works in posts & pages) ===== */
+.post .table-wrap, .prose .table-wrap { overflow-x: auto; }
+
+.post table, .prose table {
+  width: 100%;
+  border-collapse: collapse;   /* join borders cleanly */
+  border: 1px solid var(--line);
+  margin: 1.25em 0;
+  font-size: 0.95em;
+  background: transparent;
+}
+
+.post table th, .post table td,
+.prose table th, .prose table td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.post table thead th, .prose table thead th {
+  background: color-mix(in oklab, var(--bg), #ffffff 4%);
+  font-weight: 700;
+}
+
+.post table tbody tr:nth-child(even) td,
+.prose table tbody tr:nth-child(even) td {
+  background: color-mix(in oklab, var(--bg), #000000 4%);
+}
 
 /* post reading column */
 .post{ max-width:92ch; margin:0 auto; }
