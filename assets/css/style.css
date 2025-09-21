@@ -121,40 +121,61 @@ code{
 .post figcaption{ color:var(--muted); font-size:13px; text-align:center; margin-top:6px; }
 .post ul, .post ol{ padding-left:1.2em; }
 
-/* --- Clean, normal code blocks --- */
-.post pre,
-.post .highlight {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  background: #1e1e1e;           /* dark gray panel */
-  color: #e6e6e6;                /* light text */
-  border: 1px solid #444;        /* thin border */
-  border-radius: 4px;            /* subtle rounding */
-  padding: 12px 14px;
-  margin: 16px 0;
+/* ===== Code blocks — uniform dark panel + colorful text (no chunk backgrounds) ===== */
+
+/* panel + defaults (works for posts & pages) */
+.post pre, .post .highlight,
+.prose pre, .prose .highlight{
+  max-width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  background:#0f1115;            /* near-black whole block */
+  color:#e9edf5;                  /* default code text */
+  border:1px solid #262a33;       /* subtle border */
+  border-radius:6px;
+  padding:12px 14px;
+  margin:16px 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size:.95em; line-height:1.55;
 }
 
-.post code {
+/* never add extra backgrounds inside the block */
+pre code{ background:none; border:none; padding:0; color:inherit; }
+
+/* inline code (in paragraphs/lists) — plain colored monospace, no pill */
+.post p code, .post li code,
+.prose p code, .prose li code{
+  background:none;
+  border:none;
+  padding:0;
+  color:#facc15;                  /* inline code color (yellow) */
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.95em;
-  background: none;    /* inline code will keep theme background */
-  border: none;
-  padding: 0;
-  white-space: pre;
+  font-size:.95em;
+  white-space: break-spaces;      /* inline can wrap if long */
 }
 
-.post p code,
-.post li code {
-  background: #2a2a2a;     /* inline code small highlight */
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 0.1em 0.35em;
-}
+/* ---------- Simple syntax colors (Rouge token classes) ---------- */
+/* strings (yellow) */
+.highlight .s, .highlight .s1, .highlight .s2,
+.highlight .sb, .highlight .sc, .highlight .sd,
+.highlight .se, .highlight .sh, .highlight .si,
+.highlight .sr, .highlight .ss { color:#facc15; }
+
+/* commands / functions / keywords (purple) */
+.highlight .nb, .highlight .nf, .highlight .k, .highlight .kc,
+.highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt { color:#a78bfa; }
+
+/* params / flags / attrs / options (pink-red) */
+.highlight .na, .highlight .no, .highlight .nt, .highlight .nv, .highlight .ow { color:#f472b6; }
+
+/* comments (muted) */
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs { color:#8aa0b5; }
+
+/* numbers (slightly cool) */
+.highlight .m, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo { color:#a6accd; }
+
+/* keep punctuation/operators neutral */
+.highlight .o, .highlight .p { color:inherit; }
 
 
 
