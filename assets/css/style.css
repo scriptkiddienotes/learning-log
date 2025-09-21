@@ -112,6 +112,34 @@ code{
   border:1px solid var(--line);
 }
 
+
+/* ===== Tables ===== */
+.post table, .prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+
+.post th, .post td,
+.prose th, .prose td {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.post th, .prose th {
+  background: color-mix(in oklab, var(--bg), #fff 4%); /* slightly lifted bg */
+  color: var(--text);
+  font-weight: 600;
+}
+
+.post tr:nth-child(even) td,
+.prose tr:nth-child(even) td {
+  background: color-mix(in oklab, var(--bg), #000 4%); /* zebra striping */
+}
+
+
 /* post reading column */
 .post{ max-width:92ch; margin:0 auto; }
 .post p{ text-align: justify; text-justify: inter-word; hyphens:auto; overflow-wrap:anywhere; }
