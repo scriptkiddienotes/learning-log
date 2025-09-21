@@ -43,9 +43,9 @@ Every variable lives in memory. A pointer stores the *address* of another variab
 int x = 42;
 int *ptr = &x;   // &x means "address of x"
 
-we have to learn first the basic concept about [How 32-bit and 64-bit Processors Fetch Data](https://scriptkiddienotes.github.io/learning-log/computer%20architecture/2025/09/16/How-32-bit-and-64-bit-Processors-Fetch-Data/).
-
 # Variables and Their Memory
+
+we have to learn first the basic concept about [How 32-bit and 64-bit Processors Fetch Data](https://scriptkiddienotes.github.io/learning-log/computer%20architecture/2025/09/16/How-32-bit-and-64-bit-Processors-Fetch-Data/).
 
 Here is the list of basic variables sizes according to their processor type :
 | Type | 32-bit system | 64-bit system |
