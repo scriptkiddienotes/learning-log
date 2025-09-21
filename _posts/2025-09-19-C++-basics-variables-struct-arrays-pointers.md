@@ -1,21 +1,21 @@
 ---
 layout: post
-title: "C++ basics - variables , struct , arrays , pointers"
+title: "C++ basics"
 categories: ["Languages", "C++"]
 excerpt: "C++ basics - variables , struct , arrays , pointers"
 ---
 
-For malware reversing part , the basic understanding of variables is important, we would learn variables first and then how they work in the operating system by reversing the programs
+For the malware reversing part, a basic understanding of variables is important. We will learn variables first, and then see how they work in the operating system by reversing simple programs.
 
-## Declare a type
+## Declaring a type
 
-int age = 25;     // an integer
+int age = 25;     // `an integer`
 
-char grade = 'A'; // a single character
+char grade = 'A'; // `a single character`
 
-float pi = 3.14;  // a floating point number
+float pi = 3.14;  // `a floating point number`
 
-int numbers[3] = {10, 20, 30}; // an array
+int numbers[3] = {10, 20, 30}; // `an array`
 
 ## Structure
 
