@@ -19,7 +19,7 @@ int numbers[3] = {10, 20, 30}; // `an array`
 
 # Structure
 
-A `struct` is a *composite data type* in C/C++ that aggregates variables of possibly different types into a single memory block, laid out in a defined order. Each variable inside is called a **member**, and they are stored contiguously in memory
+A `struct` is a composite data type in C/C++ that combines variables of different types into a single memory block, laid out in a defined order. Each variable inside is called a member, and they are stored contiguously in memory
 
 ```c++
 struct Person {
