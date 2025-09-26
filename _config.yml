@@ -17,8 +17,6 @@ nav:
     url: "/categories/computer-architecture/"
   - title: "Learn Reversing"
     url: "/categories/learn-reversing/"
-  - title: "Reversing Basic Programs"
-    url: "/categories/learn-reversing/reversing-basic-programs"
   - title: "About"
     url: "/about/"
 
